@@ -1,8 +1,10 @@
 "use client";
-import { Box, Divider, Grid, Typography } from "@mui/material"
+import { Box, Divider, Grid, IconButton, Typography } from "@mui/material"
 import React, { useEffect, useState } from 'react'
 import Card from "./Card"
 import axios from "axios"
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Lupin() {
   // const cardItems = [
@@ -93,6 +95,21 @@ export default function Lupin() {
 
         ))}
       </Grid>
+
+      <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+        <IconButton>
+          <ArrowBackIosIcon sx={{ color: "white", borderRadius: "10px", backgroundColor: "#5E5B5B", padding: "5px" }} />
+        </IconButton>
+        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+          <Typography sx={{ marginRight: "5px" }}>1</Typography>
+          <Typography sx={{ marginRight: "5px" }}>2</Typography>
+          <Typography sx={{ marginRight: "5px" }}>3</Typography>
+          <Typography>......10</Typography>
+        </Box>
+        <IconButton>
+          <ArrowForwardIosIcon sx={{ color: "white", borderRadius: "10px", backgroundColor: "#5E5B5B", padding: "5px" }} />
+        </IconButton>
+      </Box>
 
     </>
   )
