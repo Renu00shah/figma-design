@@ -1,11 +1,13 @@
+"use client";
 import { IMAGES } from "@/assets/Images"
-import { Box, IconButton, Typography } from "@mui/material"
+import { Box, IconButton, Typography, useMediaQuery } from "@mui/material"
 import Image from "next/image"
 import React from 'react'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function Home() {
+  // const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"))
   const style = {
     typo: {
       display: "flex",

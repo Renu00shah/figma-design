@@ -1,7 +1,8 @@
 import { Box, Button, Typography } from "@mui/material"
 import React from 'react'
 
-export default function Card() {
+export default function Card({ centre, Address }) {
+  // console.log(cardItems)
   const style = {
     root: {
       // border: "2px solid red",
@@ -38,9 +39,9 @@ export default function Card() {
     <>
       <Box sx={style.root}>
         <Typography sx={style.typo1}>
-          NRL Mumbai
+          {Address}
         </Typography>
-        <Typography sx={style.typo2}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo perspiciatis ratione dolores modi unde repudiandae officia excepturi! </Typography>
+        <Typography sx={style.typo2}>{centre}</Typography>
         <Box sx={style.button}>
           <Typography sx={style.know}>Know More</Typography>
           <Button sx={style.book}>Book a visit</Button>
